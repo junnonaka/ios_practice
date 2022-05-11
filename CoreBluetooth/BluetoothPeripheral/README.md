@@ -15,6 +15,10 @@
 
 アドバタイズを開始します。
 
+ローカルネーム
+
+"TEST BLE"でアドバタイズします。
+
 サービス
 
 Service UUID:AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE
@@ -48,3 +52,7 @@ Notifyでセントラルに「0xAA」を送信します。
 接続後にセントラルでIndicateを有効化するとボタンが有効になります。
 
 Indicateでセントラルに「0xBB」を送信します。
+
+## イベントログ
+<img width="207" alt="5" src="https://user-images.githubusercontent.com/72245628/167855161-defcab8f-4e23-45dd-ab7f-c29c98596e4b.png">
+CoreBluetoothのイベントをログとして出力します。
