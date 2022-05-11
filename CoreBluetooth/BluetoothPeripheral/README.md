@@ -15,15 +15,15 @@
 
 アドバタイズを開始します。
 
-ローカルネーム
+### ローカルネーム
 
 "TEST BLE"でアドバタイズします。
 
-サービス
+### サービス
 
 Service UUID:AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE
 
-キャラクタリスティック
+### キャラクタリスティック
 
 WriteCharacteristic UUID:AAAAAAAA-AAAA-BBBB-BBBB-BBBBBBBBBBBB
 
