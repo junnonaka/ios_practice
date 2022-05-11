@@ -32,17 +32,19 @@ NotifyCharacteristic UUID:AAAAAAAA-DDDD-BBBB-BBBB-BBBBBBBBBBBB
 IndicateCharacteristic UUID:AAAAAAAA-EEEE-BBBB-BBBB-BBBBBBBBBBBB
 
 ## アドバタイズ停止ボタン
-<img width="207" alt="2" src="https://user-images.githubusercontent.com/72245628/167850244-e173fdb3-131b-40d8-94f3-427dcf647f76.png">
+<img width="207" alt="6" src="https://user-images.githubusercontent.com/72245628/167854551-878077a0-e6ba-4091-af06-5fb129000627.png">
 アドバタイズを停止します。
 
+アドバタイズ開始後に有効になります。
+
 ## Notifyボタン
-<img width="207" alt="3" src="https://user-images.githubusercontent.com/72245628/167850348-fa0eabcc-4d86-4f01-bbbd-3e0ae37e14c7.png">
-接続後に有効になります。
+<img width="207" alt="7" src="https://user-images.githubusercontent.com/72245628/167854639-86a5a9ca-5a2e-43f3-8597-9263404ea017.png">
+接続後にセントラルでNotifyを有効にするとボタンが有効になります。
 
 Notifyでセントラルに「0xAA」を送信します。
 
 ## Indicate ボタン
-<img width="207" alt="4" src="https://user-images.githubusercontent.com/72245628/167850995-84729e8d-21b7-491f-aa43-7ade5c03066a.png">
-接続後に有効になります。
+<img width="207" alt="8" src="https://user-images.githubusercontent.com/72245628/167854707-1bbcb099-cdfe-4e37-9f56-101bccfb5841.png">
+接続後にセントラルでIndicateを有効化するとボタンが有効になります。
 
 Indicateでセントラルに「0xBB」を送信します。
