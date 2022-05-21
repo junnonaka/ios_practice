@@ -76,11 +76,11 @@ class ViewController: UIViewController {
         //キャラクタリスティックの設定(properties:属性、permissions：読み出し書込みの可否を与える)
         writeCharacteristic = CBMutableCharacteristic(type: BLEWriteCharacteristicUUID, properties: .write, value: nil, permissions: [.writeable,.readable])
         
-        writeWithoutResponseCharacteristic = CBMutableCharacteristic(type: BLEWriteCharacteristicUUID, properties: .writeWithoutResponse, value: nil, permissions: .writeable)
+        writeWithoutResponseCharacteristic = CBMutableCharacteristic(type: BLEWriteWithoutResponseCharacteristicUUID, properties: .writeWithoutResponse, value: nil, permissions: .writeable)
         
-        //readCharacteristicは読み出した時の初期値を与えておく
-        let readData = Data( [0x55])
-        readCharacteristic = CBMutableCharacteristic(type: BLEReadCharacteristicUUID, properties: .read, value: readData, permissions: .readable)
+        //readCharacteristicは読み出した時の初期値を与えておくと、初期値固定になるのでnilにする
+        //let readData = Data( [0x55])
+        readCharacteristic = CBMutableCharacteristic(type: BLEReadCharacteristicUUID, properties: .read, value: nil, permissions: .readable)
 
         notifyCharacteristic = CBMutableCharacteristic(type: BLENotifyCharacteristicUUID, properties: .notify, value: nil, permissions: .readable)
 
@@ -176,11 +176,13 @@ extension ViewController : CBPeripheralManagerDelegate
     func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveRead request: CBATTRequest) {
         print("didReceiveReadRequest")
         logTextView.text.append("didReceiveReadRequest\n")
-        
+
         //読み出し許可の与えているキャラクタリスティックか確認
         if request.characteristic.uuid.isEqual(readCharacteristic?.uuid){
+            let readData = Data( [0x55])
             //valueをセット
-            request.value = self.readCharacteristic?.value
+            request.value = readData
+            logTextView.text.append("read value \(String(data:  readData, encoding: .utf8)!)\n")
             //読み出し要求に応える
             peripheralManager?.respond(to: request, withResult: .success)
         }else{
@@ -197,6 +199,7 @@ extension ViewController : CBPeripheralManagerDelegate
             if request.characteristic.uuid.isEqual(writeCharacteristic?.uuid) {
                 //valueをセット
                 writeCharacteristic!.value = request.value
+                logTextView.text.append("write value \(String(data:  request.value!, encoding: .utf8)!)\n")
                 //リクエストに応答
                 peripheralManager?.respond(to: requests[0], withResult: .success)
             }else if request.characteristic.uuid.isEqual(writeWithoutResponseCharacteristic?.uuid){
