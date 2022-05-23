@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wnv-oT-Iry">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CoreBluetoothCentralSample-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreBluetoothCentralConnectSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="接続状態:未接続" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSw-P0-spv">
+                                <rect key="frame" x="20" y="115" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1T-0Z-s43">
+                                <rect key="frame" x="20" y="172" width="374" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="接続">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="connectStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0IE-AU-Tm2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ux-8o-PMD">
+                                <rect key="frame" x="20" y="332" width="374" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Write">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="writeButtonTup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BPq-AI-ecX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTe-Bt-46O">
+                                <rect key="frame" x="20" y="412" width="374" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Read">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="readButtonTup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Rn-Ri-GcI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODq-XL-8Az">
+                                <rect key="frame" x="20" y="252" width="374" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="切断">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="disconnectButtonTup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Qf-h9-leL"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="akQ-N6-Vqd">
+                                <rect key="frame" x="20" y="517" width="374" height="345"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ログ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGp-d8-VMT">
+                                <rect key="frame" x="20" y="479" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="akQ-N6-Vqd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2Oo-IU-Sko"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Ux-8o-PMD" secondAttribute="trailing" constant="20" id="F3J-z8-deq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HTe-Bt-46O" secondAttribute="trailing" constant="20" id="FKK-QB-Gym"/>
+                            <constraint firstItem="YGp-d8-VMT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GpS-xm-W5X"/>
+                            <constraint firstItem="HTe-Bt-46O" firstAttribute="top" secondItem="3Ux-8o-PMD" secondAttribute="bottom" constant="36" id="H5t-nf-pH5"/>
+                            <constraint firstItem="ODq-XL-8Az" firstAttribute="top" secondItem="N1T-0Z-s43" secondAttribute="bottom" constant="36" id="KTM-eL-pX7"/>
+                            <constraint firstItem="ODq-XL-8Az" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QNE-K5-PxO"/>
+                            <constraint firstItem="FSw-P0-spv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="SJu-kM-tQs"/>
+                            <constraint firstItem="N1T-0Z-s43" firstAttribute="top" secondItem="FSw-P0-spv" secondAttribute="bottom" constant="36" id="Unr-gb-ae9"/>
+                            <constraint firstItem="akQ-N6-Vqd" firstAttribute="top" secondItem="YGp-d8-VMT" secondAttribute="bottom" constant="17" id="XCk-ZY-YXW"/>
+                            <constraint firstItem="HTe-Bt-46O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XTt-J6-pKB"/>
+                            <constraint firstItem="3Ux-8o-PMD" firstAttribute="top" secondItem="ODq-XL-8Az" secondAttribute="bottom" constant="36" id="ZtE-ux-KdL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N1T-0Z-s43" secondAttribute="trailing" constant="20" id="dBE-Ov-G9g"/>
+                            <constraint firstItem="FSw-P0-spv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dSi-Ej-Nn2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="akQ-N6-Vqd" secondAttribute="trailing" constant="20" id="f9U-S9-Y6S"/>
+                            <constraint firstItem="akQ-N6-Vqd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ggJ-u3-GZ5"/>
+                            <constraint firstItem="N1T-0Z-s43" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tdm-TC-gli"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ODq-XL-8Az" secondAttribute="trailing" constant="20" id="tlm-OJ-jNz"/>
+                            <constraint firstItem="YGp-d8-VMT" firstAttribute="top" secondItem="HTe-Bt-46O" secondAttribute="bottom" constant="23" id="vlV-X2-xdi"/>
+                            <constraint firstItem="3Ux-8o-PMD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wP3-rs-1RU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CoreBluetoothCentralSample" id="suD-M9-eyX"/>
+                    <connections>
+                        <outlet property="connectButton" destination="N1T-0Z-s43" id="LaF-Wi-IS7"/>
+                        <outlet property="connectLabel" destination="FSw-P0-spv" id="faW-y1-Tvi"/>
+                        <outlet property="connectStateLabel" destination="FSw-P0-spv" id="9c7-8m-9Ze"/>
+                        <outlet property="disconnectButton" destination="ODq-XL-8Az" id="gt5-oO-o8I"/>
+                        <outlet property="logTextView" destination="akQ-N6-Vqd" id="elU-KM-N90"/>
+                        <outlet property="readButton" destination="HTe-Bt-46O" id="rGh-IB-MIv"/>
+                        <outlet property="writeButton" destination="3Ux-8o-PMD" id="qrZ-wO-mmI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5l4-Zf-Wz6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wnv-oT-Iry" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7IA-ua-GuY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" systemColor="linkColor"/>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jGu-6v-K9U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OCz-Ih-wRd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
