@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B74E4212288969AB00C2A749 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E4211288969AB00C2A749 /* WeatherService.swift */; };
+		B74E4218288AC81C00C2A749 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E4217288AC81C00C2A749 /* WeatherData.swift */; };
+		B74E4221288BE91C00C2A749 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E4220288BE91C00C2A749 /* WeatherModel.swift */; };
+		B74E4226288D279B00C2A749 /* day-background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B74E4224288D279B00C2A749 /* day-background.pdf */; };
+		B74E4227288D279B00C2A749 /* night-background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B74E4225288D279B00C2A749 /* night-background.pdf */; };
 		B7D10ED4287C465C001DD75F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D10ED3287C465C001DD75F /* AppDelegate.swift */; };
 		B7D10ED8287C465C001DD75F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D10ED7287C465C001DD75F /* ViewController.swift */; };
 		B7D10EDD287C465D001DD75F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7D10EDC287C465D001DD75F /* Assets.xcassets */; };
@@ -14,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B74E4211288969AB00C2A749 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		B74E4217288AC81C00C2A749 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		B74E4220288BE91C00C2A749 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		B74E4224288D279B00C2A749 /* day-background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "day-background.pdf"; sourceTree = "<group>"; };
+		B74E4225288D279B00C2A749 /* night-background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "night-background.pdf"; sourceTree = "<group>"; };
 		B7D10ED0287C465C001DD75F /* Weathery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weathery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D10ED3287C465C001DD75F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7D10ED7287C465C001DD75F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +43,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B74E420E2889693400C2A749 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B74E4211288969AB00C2A749 /* WeatherService.swift */,
+				B74E4217288AC81C00C2A749 /* WeatherData.swift */,
+				B74E4220288BE91C00C2A749 /* WeatherModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B74E420F2889694D00C2A749 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B74E42102889695A00C2A749 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B7D10ED7287C465C001DD75F /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		B7D10EC7287C465C001DD75F = {
 			isa = PBXGroup;
 			children = (
@@ -52,9 +87,13 @@
 		B7D10ED2287C465C001DD75F /* Weathery */ = {
 			isa = PBXGroup;
 			children = (
+				B74E42102889695A00C2A749 /* Controller */,
+				B74E420F2889694D00C2A749 /* View */,
+				B74E420E2889693400C2A749 /* Model */,
 				B7D10ED3287C465C001DD75F /* AppDelegate.swift */,
-				B7D10ED7287C465C001DD75F /* ViewController.swift */,
 				B7D10EDC287C465D001DD75F /* Assets.xcassets */,
+				B74E4224288D279B00C2A749 /* day-background.pdf */,
+				B74E4225288D279B00C2A749 /* night-background.pdf */,
 				B7D10EDE287C465D001DD75F /* LaunchScreen.storyboard */,
 				B7D10EE1287C465D001DD75F /* Info.plist */,
 			);
@@ -121,6 +160,8 @@
 			files = (
 				B7D10EE0287C465D001DD75F /* LaunchScreen.storyboard in Resources */,
 				B7D10EDD287C465D001DD75F /* Assets.xcassets in Resources */,
+				B74E4226288D279B00C2A749 /* day-background.pdf in Resources */,
+				B74E4227288D279B00C2A749 /* night-background.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +173,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7D10ED8287C465C001DD75F /* ViewController.swift in Sources */,
+				B74E4212288969AB00C2A749 /* WeatherService.swift in Sources */,
+				B74E4218288AC81C00C2A749 /* WeatherData.swift in Sources */,
 				B7D10ED4287C465C001DD75F /* AppDelegate.swift in Sources */,
+				B74E4221288BE91C00C2A749 /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +318,8 @@
 				DEVELOPMENT_TEAM = CA9WMZNZUR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Weathery/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location use";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -301,6 +347,8 @@
 				DEVELOPMENT_TEAM = CA9WMZNZUR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Weathery/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location use";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location use";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
